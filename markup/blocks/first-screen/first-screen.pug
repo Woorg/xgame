@@ -1,0 +1,30 @@
+mixin first-screen(data)
+  section.first-screen
+    +header()
+    section.first-screen__container.container
+      .first-screen__entry
+        h1.first-screen__title.title.title_big Обучим ваших сотрудников навыкам работы в Битрикс24
+        .first-screen__text Не знаешь с чего начать, просто заполни форму
+        form(method='post').first-screen__form.form
+          .form__row
+            .form__field
+              label.form__label
+                .form__label-text Имя
+                input.form__input(type="text", name="name", value="" placeholder="Константин Константинович")
+            .form__field
+              label.form__label
+                .form__label-text Телефон
+                input.form__input(type="text", name="phone", value="" placeholder="+7 912 444 28 89")
+          input.form__submit.button(type="text", value="Отправить")
+
+      .first-screen__phones
+        .first-screen__phone.first-screen__phone_first
+          img.phone-second(src='assets/images/content/phone-1.png' srcset='assets/images/content/phone-1@2x.png 2x, assets/images/content/phone-1@3x.png 3x')
+        .first-screen__phone.first-screen__phone_second
+          img.phone-second(src='assets/images/content/phone-2.png' srcset='assets/images/content/phone-2@2x.png 2x, assets/images/content/phone-2@3x.png 3x')
+
+
+
+
+
+

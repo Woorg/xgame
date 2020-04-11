@@ -1,0 +1,54 @@
+
+.form
+  display: flex
+  flex-direction: column
+  &__row
+    display: flex
+    flex-wrap: wrap
+    &:last-child,
+    &:only-child
+      margin-bottom: 0
+
+  &__field
+    margin-bottom: 30px
+    width: 100%
+    display: flex
+    flex-grow: 1
+
+    &:nth-child(2)
+      .form__label-text
+        background: #2e36c0
+
+  &__label
+    position: relative
+    flex-grow: 1
+
+  &__label-text
+    position: absolute
+    top: -7px
+    left: 12px
+    padding-right: 6px
+    padding-left: 6px
+    background: #2a32b8
+    color: #d9d9d9
+    font-size: 12px
+    font-weight: 400
+
+
+  &__input
+    +resetbutton
+    border: 1px solid #e8e8e8
+    padding-right: 18px
+    padding-left: 18px
+    width: 100%
+    height: 57px
+    color: $white
+    font-size: 14px
+    font-weight: 400
+    border-radius: 3px
+    +placeholder
+      color: $white
+
+  &__submit
+    flex-grow: 1
+    text-align: center

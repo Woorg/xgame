@@ -1,0 +1,22 @@
+mixin questions(data)
+  section.questions
+    .questions__container
+      .questions__form
+        h2.questions__form-title Ещё вопросы
+
+        form.questions__form-object.form
+          .form__field
+            .form__label-w
+              label(for="") Имя
+            input.form__input(type="text", name="", value="name", placeholder="Константин Константинович")
+          .form__field.form__field_phone
+            .form__label-w
+              label(for="") Телефон
+            input.form__input(type="text", name="", value="phone", placeholder="+7 912 444 28 89")
+
+          .form__field.form__field_phone
+            .form__label-w
+              label(for="") E-mail
+            input.form__input(type="text", name="", value="E-mail", placeholder="sale@rvspace.ru")
+
+          input.form__submit.button(type="text", value="Отправить")
