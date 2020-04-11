@@ -1,0 +1,12 @@
+mixin payment(data)
+  section.payment
+    .payment__container.container
+      .payment__entry
+        h2.payment__title ВХОДЯЩИЕ ПЛАТеЖИ
+        .payment__text Получайте оплату напрямую от игроков на карту, электронный кошелек или наличными в руки
+
+      ul.payment__slider
+        - var count = 1
+        while count <= 6
+          li.payment__item
+            img.lazy(data-src="assets/images/content/" + count++ + "-payments.png", alt="")

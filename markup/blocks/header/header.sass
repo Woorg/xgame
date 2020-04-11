@@ -1,21 +1,13 @@
 .header
+  background-color: #292422
   &__container
-    padding-top: 43px
-    padding-bottom: 43px
+    padding-top: 70px
+    padding-bottom: 0px
     line-height: 1
-
-
-  &__contacts
-    margin-left: auto
-    text-align: right
-    display: flex
-    flex-direction: column
-
-  // &__logo
-
-  &__phone
-    margin-left: 60px
-
+  &__logo
+    max-width: 90px
+    width: 100%
+    height: auto
 
 
 .logo
@@ -23,15 +15,6 @@
   font-size: 23px
   font-weight: 500
   text-decoration: none
+  &__name
+    +visuallyhidden()
 
-.phone
-  color: #ffffff
-  font-size: 16px
-  font-weight: 700
-  text-decoration: none
-
-.email
-  color: #ffffff
-  font-size: 16px
-  font-weight: 400
-  text-decoration: none

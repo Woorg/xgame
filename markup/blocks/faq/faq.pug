@@ -1,0 +1,20 @@
+mixin faq(data)
+  section.faq
+    .faq__container
+      h2.faq__title ответы на вопросы
+
+      dl.faq__list
+      -
+        var questions = [
+          {title: 'Будут ли полезны инфотовары, если не играть в игру?', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'Как получить инфотовары? Можно ли посмотреть, как работает чат-бот?', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'Сколько все это стоит? ', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'Есть ежемесячная плата или скрытые платежи?', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'Мне нужен будет компьютер? ', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'Мне нужна банковская карта, чтобы принимать платежи?', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'},
+          {title: 'У меня остались вопросы', answer: ' Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem recusandae rerum quidem optio nisi vero. Provident possimus veritatis reiciendis. Similique, officiis sed veritatis perspiciatis illum ratione quis nemo autem architecto.'}
+        ]
+
+      each question in questions
+          dt.faq__term #{question.title}
+          dd.faq__desc #{question.answer}

@@ -6,20 +6,35 @@ html(class="no-js", lang="ru")
   include ../blocks/footer/footer.pug
 
   include ../blocks/first-screen/first-screen.pug
-  include ../blocks/education/education.pug
-  include ../blocks/packages/packages.pug
-  include ../blocks/questions/questions.pug
+  include ../blocks/stats/stats.pug
+  include ../blocks/levels/levels.pug
+  include ../blocks/income/income.pug
+  include ../blocks/product/product.pug
+  include ../blocks/video/video.pug
+  include ../blocks/why/why.pug
+  include ../blocks/payment/payment.pug
+  include ../blocks/advantages/advantages.pug
+  include ../blocks/faq/faq.pug
+  include ../blocks/get/get.pug
+
 
   head
     +head(head.defaults)
   body.page
     |%=symbols=%
+    +header()
     main.page__inner
-      //- +header()
       +first-screen()
-      +education()
-      +packages()
-      +questions()
+      +stats()
+      +levels(levels)
+      +income(income)
+      +product()
+      +video()
+      +why()
+      +payment()
+      +advantages()
+      +faq()
+      +get()
 
     .page__bottom
       +footer()
@@ -28,7 +43,7 @@ html(class="no-js", lang="ru")
     script(src='%=static=%js/separate-js/lazyload.min.js' defer)
     script(src='%=static=%js/separate-js/jquery.min.js' defer)
     script(src='%=static=%js/separate-js/slick.min.js' defer)
-    script(src='%=static=%js/separate-js/jquery.mask.min.js' defer)
+    //- script(src='%=static=%js/separate-js/jquery.mask.min.js' defer)
 
     script(src='%=static=%js/main%=hash=%%=min=%.js' defer)
 

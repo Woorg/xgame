@@ -1,27 +1,36 @@
 mixin first-screen(data)
-  section.first-screen
-    +header()
-    section.first-screen__container.container
+  .first-screen
+    .first-screen__container.container.flex
       .first-screen__entry
-        h1.first-screen__title.title.title_big Обучим ваших сотрудников навыкам работы в Битрикс24
-        .first-screen__text Не знаешь с чего начать, просто заполни форму
-        form(method='post').first-screen__form.form
-          .form__row
-            .form__field
-              label.form__label
-                .form__label-text Имя
-                input.form__input(type="text", name="name", value="" placeholder="Константин Константинович")
-            .form__field
-              label.form__label
-                .form__label-text Телефон
-                input.form__input(type="text", name="phone", value="" placeholder="+7 912 444 28 89")
-          input.form__submit.button(type="text", value="Отправить")
+        h1.first-screen__title.title.title_big Скачай игру <span>за 30 секунд</span> и заработай на ней уже сегодня
+        .first-screen__text Играйте в xGame, чтобы прокачать себя и получить источник постоянного дохода
+        a.first-screen__button.button(href="#") Смотреть видео
 
-      .first-screen__phones
-        .first-screen__phone.first-screen__phone_first
-          img.phone-second(src='assets/images/content/phone-1.png' srcset='assets/images/content/phone-1@2x.png 2x, assets/images/content/phone-1@3x.png 3x')
-        .first-screen__phone.first-screen__phone_second
-          img.phone-second(src='assets/images/content/phone-2.png' srcset='assets/images/content/phone-2@2x.png 2x, assets/images/content/phone-2@3x.png 3x')
+
+      .first-screen__person
+        picture.first-screen__image
+          source(type='image/webp' media='(min-width:800px)' data-srcset='assets/images/general/person@2x.webp 2x, assets/images/general/person.webp 1x')
+          source(type='image/png' media='(min-width:800px)' data-srcset='assets/images/general/person@2x.png 2x, assets/images/general/person.png 1x')
+
+          source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/person-mob@2x.webp 2x, assets/images/general/person-mob.webp 1x')
+          source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/general/person-mob@2x.png 2x, assets/images/general/person-mob.png 1x')
+
+          img.lazy(data-src='assets/images/general/person@2x.png' alt="")
+
+
+        .first-screen__stores.stores.flex.flex_center
+          a.stores__store.stores__store_google(href="#")
+            source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/googleplay@2x.webp 2x, assets/images/general/googleplay.webp 1x')
+            source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/general/googleplay@2x.png 2x, assets/images/general/googleplay.png 1x')
+
+            img.lazy(data-src='assets/images/general/googleplay@2x.png' alt="")
+
+          a.stores__store.stores__store_apple(href="#")
+            source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/appstore@2x.webp 2x, assets/images/general/appstore.webp 1x')
+            source(type='image/png' media='(min-width:300px)' data-srcset='assets/images/general/appstore@2x.png 2x, assets/images/general/appstore.png 1x')
+
+            img.lazy(data-src='assets/images/general/appstore@2x.png' alt="")
+
 
 
 

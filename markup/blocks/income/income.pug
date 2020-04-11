@@ -1,0 +1,21 @@
+-
+  var list = [
+    {title: 'Новые клиенты в ваш собственный бизнес', text: 'Расскажем, что такое лид-магнит и автоворонка, покажем как получать клиентов с помощью инструментов digital-маркетинга'},
+    {title: 'Заработок на продвижении игры и цифровых товаров', text: 'Сразу после активации вы получаете шаблоны и пошаговую инструкцию от чат-бота, как заработать на игре уже сегодня'},
+    {title: 'Встроенная автоматическая партнерская программа ', text: 'После продажи 4 товаров Идея, ваша сеть начинает развиваться самостоятельно, а вы получаете постоянный доход'},
+  ]
+
+mixin income(data)
+  section.income
+    .income__container
+      h2.income__title #{income.title}
+      .income__text #{income.text}
+
+      ul.list
+        each item, i in list
+          li.list__item
+            .list__image
+              img.lazy(data-src!='assets/images/content/income-' + (i + 1) + '.png', alt="")
+            .list__entry
+              h3.list__title #{item.title}
+              .list__text #{item.text}

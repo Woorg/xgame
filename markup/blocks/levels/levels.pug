@@ -1,0 +1,63 @@
+
+mixin levels(data)
+  section.levels
+    .levels__container.container
+      h2.levels__title #{data.title}
+      .levels__text #{data.text}
+
+      .levels__slider
+        -
+          var slider = [
+            {title: 'Вдохновитель', text: 'доход 1600 ₽'},
+            {title: 'Вдохновитель2', text: 'доход 1600 ₽'},
+            {title: 'Вдохновитель3 ', text: 'доход 1600 ₽'},
+            {title: 'Вдохновитель4', text: 'доход 1600 ₽'},
+            {title: 'Вдохновитель5', text: 'доход 1600 ₽'},
+            {title: 'Вдохновитель6', text: 'доход 1600 ₽'},
+
+
+          ]
+
+        each slide, i in slider
+
+          .levels__item
+            .levels__image
+              img.lazy(data-src!='assets/images/content/' + (i+1) + '.png')
+            .levels__bottom
+              .levels__item-title #{slide.title}
+              .levels__item-text #{slide.text}
+
+        //- .levels__item
+        //-   .levels__image
+        //-     img.lazy(data-src="assets/images/content/2.png", alt="")
+        //-   .levels__bottom
+        //-     .levels__item-title Вдохновитель доход 1600 ₽
+        //-     .levels__item-text доход 1600 ₽
+
+        //- .levels__item
+        //-   .levels__image
+        //-     img.lazy(data-src="assets/images/content/3.png", alt="")
+        //-   .levels__bottom
+        //-     .levels__item-title Вдохновитель доход 1600 ₽
+        //-     .levels__item-text доход 1600 ₽
+
+        //- .levels__item
+        //-   .levels__image
+        //-     img.lazy(data-src="assets/images/content/4.png", alt="")
+        //-   .levels__bottom
+        //-     .levels__item-title
+        //-     .levels__item-text
+
+        //- .levels__item
+        //-   .levels__image
+        //-     img.lazy(data-src="assets/images/content/5.png", alt="")
+        //-   .levels__bottom
+        //-     .levels__item-title
+        //-     .levels__item-text
+
+        //- .levels__item
+        //-   .levels__image
+        //-     img.lazy(data-src="assets/images/content/6.png", alt="")
+        //-   .levels__bottom
+        //-     .levels__item-title
+        //-     .levels__item-text

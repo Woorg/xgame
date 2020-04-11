@@ -2,6 +2,8 @@
   display: flex
 .flex_start
   justify-content: flex-start
+.flex_center
+  justify-content: center
 .flex_top
   align-items: flex-start
 .flex_vertical
@@ -9,36 +11,36 @@
 .flex_bottom
   align-items: flex-end
 
+
+
 .title
   font-size: 20px
   font-weight: 500
   line-height: 1.4
 
-  &_big
-    font-size: 22px
-    font-weight: 700
-    line-height: 1.363
 
 
 .button
   +resetbutton()
-  padding-top: 17px
-  padding-right: 30px
-  padding-bottom: 17px
-  padding-left: 30px
-  width: 279px
-  height: 55px
-  background: linear-gradient(to right, #15d9c0 0%, #13b9ff 100%)
+  padding-top: 16px
+  padding-right: 44px
+  padding-bottom: 16px
+  padding-left: 44px
+  background-color: #00b5f4
   color: $white
-  font-size: 16px
-  font-weight: 500
+  font-family: $ak
+  font-size: 28px
+  font-weight: 900
+  line-height: 1
   text-decoration: none
-  border-radius: 3px
+  text-transform: uppercase
   +tr(background-color .3s ease)
 
   &:hover
-    background-color: darken(#33cc66, 10)
+    background-color: darken(#00b5f4, 10)
     +tr(background-color .3s ease)
+
+
 
 
 .wysiwyg

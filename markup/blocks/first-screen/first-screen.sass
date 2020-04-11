@@ -1,25 +1,42 @@
 .first-screen
-  background-image: url('../images/general/first-screen-mob-bg.svg')
+  background-color: #292422
   color: $white
-  // &__container
-  // &__entry
+  &__container
+    position: relative
+    z-index: 1
+    padding-bottom: 60px
+
+  &__entry
+    max-width: 556px
+    width: 100%
 
   &__title
     margin-bottom: 28px
     color: $white
+    font-family: $ak
+    font-weight: 900
+    font-size: 40px
+    line-height: 1.2
+    text-transform: uppercase
+    span
+      color: #00b5f4
 
   &__text
-    font-size: 18px
-    font-weight: 500
-    line-height: 1.277
+    margin-bottom: 58px
+    font-family: $r
+    font-size: 16px
+    font-weight: 400
+    line-height: 1.25
 
-  &__form
-    margin-top: 30px
+  &__person
+    margin-top: -84px
 
-  // &__phones
+  // &__stores
 
-  // &__phone
+.stores
+  &__store
+    max-width: 104px
+    width: 100%
 
-  // &__phone_first
-
-  // &__phone_second
+  &__store_apple
+    max-width: 101px
