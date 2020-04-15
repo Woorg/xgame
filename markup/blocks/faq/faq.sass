@@ -1,1 +1,53 @@
-// .faq
+.faq
+  background-color: #292422
+  color: $white
+  overflow: hidden
+  &__container
+    padding-top: 45px
+    padding-bottom: 58px
+    text-align: center
+  &__title
+    margin-bottom: 60px
+  &__list
+    max-width: 470px
+    width: 100%
+    font-size: 14px
+    font-weight: 500
+    text-align: left
+    +mq($medium)
+      font-size: 16px
+
+  &__item
+    // margin-bottom: 30px
+    margin-bottom: 19px
+    cursor: pointer
+    overflow: hidden
+    &:last-child
+      margin-bottom: 0
+
+  &__item_active
+
+    .faq__desc
+      margin-top: 10px
+      margin-bottom: 8px
+      height: auto
+      opacity: 1
+      font-size: 16px
+      +tr(all .3s ease)
+
+  &__term
+    &:before
+      content: '• '
+
+  &__desc
+    margin-top: 0
+    margin-bottom: 0
+    line-height: 1.4
+    opacity: 0
+    height: 0
+    +tr(all .3s ease)
+
+  &__button
+    margin-top: 61px
+    display: inline-block
+    vertical-align: top

@@ -1,1 +1,49 @@
-// .get
+.get
+  overflow: hidden
+  &__container
+    padding-top: 46px
+    padding-bottom: 40px
+    text-align: center
+  &__title
+    margin-bottom: 67px
+    color: #000
+    span
+      display: block
+      font-size: 18px
+      +mq($medium)
+        display: inline
+        font-size: 40px
+
+  &__list
+    margin: auto
+    max-width: 585px
+    width: 100%
+    text-align: left
+
+  &__item
+    position: relative
+    margin-bottom: 40px
+    padding-left: 68px
+    &:nth-child(1)
+      .get__icon
+        max-width: 45px
+
+    &:last-child
+      margin-bottom: 0
+      .get__icon
+        max-width: 41px
+
+  &__icon
+    position: absolute
+    top: 50%
+    left: 0
+    max-width: 36px
+    width: 100%
+    flex-shrink: 0
+    transform: translateY(-50%)
+
+  &__text
+    span
+      font-weight: 900
+
+

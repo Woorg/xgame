@@ -1,1 +1,86 @@
-// .payment
+.payment
+  background-color: #292422
+  color: $white
+  overflow: hidden
+  &__container
+    padding-top: 57px
+    padding-bottom: 57px
+    flex-wrap: wrap
+    text-align: center
+    +mq($medium)
+      padding-top: 124px
+      padding-bottom: 103px
+      flex-wrap: nowrap
+      text-align: left
+
+  &__entry
+    max-width: 100%
+    width: 100%
+    +mq($medium)
+      padding-top: 135px
+      padding-bottom: 147px
+      max-width: 50%
+
+  &__title
+    margin-bottom: 38px
+
+  &__text
+    max-width: 430px
+    width: 100%
+    font-family: $r
+    font-size: 16px
+    font-weight: 400
+    display: none
+    +mq($medium)
+      display: block
+
+  &__text-mob
+    padding-top: 20px
+    display: block
+    +mq($medium)
+
+      display: none
+
+  &__slider-w
+    position: relative
+    max-width: 100%
+    width: 100%
+    +mq($medium)
+      max-width: 50%
+
+  // &__slider
+
+
+  &__item
+    text-align: center
+
+  &__item-w
+    margin: auto
+    max-width: 233px
+    width: 100%
+    display: block
+    +mq($medium)
+      max-width: 273px
+
+
+  &__slider-nav
+    position: absolute
+    top: calc(50% - 26px)
+    left: 0
+    width: 100%
+    transform: translateY(-50%)
+    +mq($medium)
+      top: calc(50% - 6px)
+
+
+  &__prev
+    left: -10px
+    +mq($medium)
+      left: 37px
+
+  &__next
+    right: -10px
+    +mq($medium)
+      right: 37px
+
+

@@ -1,1 +1,100 @@
-// .income
+.income
+  overflow: hidden
+  &__container
+    padding-top: 43px
+    padding-bottom: 77px
+  &__title
+    color: #000000
+    text-align: center
+
+  &__text
+    margin-bottom: 62px
+    font-family: $ak
+    font-weight: 900
+    font-size: 18px
+    text-align: center
+    text-transform: uppercase
+
+
+
+.list
+  &__item
+    flex-wrap: wrap
+    text-align: center
+    +mq($medium)
+      flex-wrap: nowrap
+      text-align: left
+
+    &:nth-child(1)
+      margin-bottom: 75px
+      +mq($medium)
+        margin-bottom: 20px
+      .list__image
+        margin-right: auto
+        margin-left: auto
+        width: 100%
+        max-width: 290px
+        +mq($medium)
+          margin-right: 60px
+
+
+      .list__entry
+        +mq($medium)
+          padding-right: 100px
+
+    &:nth-child(2)
+      margin-bottom: 65px
+
+      .list__image
+        margin-right: auto
+        margin-left: auto
+        max-width: 308px
+        +mq($medium)
+          margin-right: 20px
+          margin-left: 60px
+
+      .list__entry
+        padding-top: 48px
+        +mq($medium)
+          padding-top: 90px
+          text-align: right
+          order: -1
+
+      .list__text
+        +mq($medium)
+          padding-left: 100px
+
+    &:nth-child(3)
+
+      .list__image
+        margin-right: auto
+        margin-left: auto
+        max-width: 311px
+        +mq($medium)
+          margin-right: 60px
+      .list__entry
+        +mq($medium)
+          padding-top: 76px
+
+
+  &__image
+    max-width: 100%
+    flex-shrink: 0
+
+
+  &__entry
+    padding-top: 48px
+    +mq($medium)
+      padding-top: 61px
+
+
+  &__title
+    margin-bottom: 19px
+    font-family: $ak
+    font-size: 24px
+    font-weight: 900
+
+  &__text
+    font-family: $r
+    font-size: 14px
+    font-weight: 400

@@ -1,1 +1,61 @@
-// .advantages
+.advantages
+  overflow: hidden
+  &__container
+    padding-top: 57px
+    padding-bottom: 57px
+    text-align: center
+    +mq($medium)
+      padding-top: 88px
+      padding-bottom: 113px
+
+
+  &__list
+    align-items: baseline
+    flex-wrap: wrap
+    +mq($medium)
+      margin-right: -30px
+      margin-left: -30px
+      flex-wrap: nowrap
+
+  &__item
+    margin-bottom: 30px
+    padding-right: 30px
+    padding-left: 30px
+    max-width: 100%
+    width: 100%
+    +mq($medium)
+      margin-bottom: 0
+      max-width: 33.3%
+
+    &:nth-child(1)
+      .advantages__image
+        max-width: 169px
+
+    &:nth-child(2)
+      .advantages__image
+        position: relative
+        top: 20px
+        max-width: 145px
+
+    &:nth-child(3)
+      .advantages__image
+        max-width: 170px
+
+  &__image
+    margin: auto
+    margin-bottom: 18px
+
+  &__title
+    margin-bottom: 15px
+    font-family: $ak
+    font-size: 24px
+    font-weight: 900
+
+  &__text
+    margin-right: -25px
+    margin-left: -25px
+    font-family: $r
+    font-size: 14px
+    font-weight: 400
+    +mq($medium)
+      font-size: 16px

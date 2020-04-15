@@ -1,13 +1,22 @@
 .header
   background-color: #292422
+  display: none
+  +mq($medium)
+    display: block
   &__container
-    padding-top: 70px
+    padding-top: 10px
     padding-bottom: 0px
     line-height: 1
+    justify-content: center
+    +mq($medium)
+      padding-top: 70px
+      justify-content: flex-start
   &__logo
-    max-width: 90px
+    max-width: 66px
     width: 100%
     height: auto
+    +mq($medium)
+      max-width: 90px
 
 
 .logo

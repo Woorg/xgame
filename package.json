@@ -7,7 +7,7 @@
   "dependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-mask-plugin": "^1.14.16",
     "magnific-popup": "^1.1.0",
     "rfs": "^9.0.0",
@@ -15,7 +15,8 @@
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
     "tabbyjs": "^12.0.3",
-    "tiny-slider": "^2.9.2"
+    "tiny-slider": "^2.9.2",
+    "vanilla-lazyload": "^15.1.1"
   },
   "devDependencies": {
     "gulp": "^3.9.1"

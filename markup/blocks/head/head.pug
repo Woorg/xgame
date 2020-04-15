@@ -2,8 +2,8 @@ mixin head(data)
   meta(charset="utf-8")
   meta(http-equiv="x-ua-compatible", content="ie=edge")
   title #{data.title}
-  meta(content="", name="description")
-  meta(content="", name="keywords")
+  meta(content="test", name="description")
+  meta(content="test", name="keywords")
   meta(name="viewport", content="width=device-width, initial-scale=1.0")
   meta(content="telephone=no", name="format-detection")
   //- meta(name="cmsmagazine" content="9b43fe137e637ba99fe3e2278ff612ec")
@@ -20,11 +20,11 @@ mixin head(data)
 
   //- |<link href="%=static=%css/separate-css/tiny-slider.css" rel="stylesheet" type="text/css">
   //- |<link href="%=static=%css/separate-css/tabby-ui.min.css" rel="stylesheet" type="text/css">
-
-  |<link href="%=static=%css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css">
-  |<link href="%=static=%css/separate-css/slick.css" rel="stylesheet" type="text/css">
-  |<link href="%=static=%css/separate-css/slick-theme.css" rel="stylesheet" type="text/css">
-  |<link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css">
+  |<link rel="preload" href="%=static=%css/main%=hash=%%=min=%.css" as="style">
+  |<link href="%=static=%css/main%=hash=%%=min=%.css" rel="stylesheet" type="text/css" media="print" onload="this.media='all'">
+  |<link href="%=static=%css/separate-css/magnific-popup.css" rel="stylesheet" type="text/css" >
+  |<link href="%=static=%css/separate-css/slick.css" rel="stylesheet" type="text/css" >
+  |<link href="%=static=%css/separate-css/slick-theme.css" rel="stylesheet" type="text/css" >
 
   if data.useSocialMetaTags
     meta(property="og:title", content="#{data.title}")

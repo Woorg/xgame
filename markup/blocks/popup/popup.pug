@@ -1,0 +1,36 @@
+mixin popup(data)
+  #video.popup.mfp-hide
+    .popup__object
+      iframe.popup__iframe.lazy(data-src="https://www.youtube.com/embed/GgZikDgKVvg?controls=1&autoplay=1&mute=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+
+mixin popup-gift(data)
+  #gift.popup.popup_info.mfp-hide
+    .popup__top.flex
+      .popup__entry
+        .popup__title Получите бесплатно <br/>1 инфотовар lite
+        img.popup__image-mob.lazy(data-src="assets/images/general/gift-popup.png", alt="")
+        .popup__text Напишите слово «подарок» нашему <br/>чат-боту и посмотрите как это работает
+
+      img.popup__image.lazy(data-src="assets/images/general/gift-popup.png", alt="")
+
+    .popup__bottom
+      a.popup__button.button.button_fourth(href="#") Написать чат-боту
+
+
+
+mixin popup-xgame(data)
+  #xgame.popup.popup_info.mfp-hide
+    .popup__top.flex
+      .popup__entry
+        .popup__title чтобы начать игру, <br/>НАПИШИТЕ “XGAME”
+        img.popup__image-mob.lazy(data-src="assets/images/general/xgame-popup.png", alt="")
+        .popup__text тому игроку, от которого попали на этот сайт
+
+      img.popup__image.lazy(data-src="assets/images/general/xgame-popup.png", alt="")
+
+    .popup__bottom
+      .popup__note Не знаете ни одного игрока? Напишите «xgame» нашему чат-боту →
+        a(href="#") написать
+
+

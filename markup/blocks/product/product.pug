@@ -3,9 +3,9 @@ mixin product(data)
     .product__container.container
       h2.product__title.title ТОВАР “ИДЕЯ”
       .product__text код активации + инфотовары
-      .product__top
+      .product__top.flex
         .product__image
-          img(src="assets/images/content/product-1.png", alt="")
+          img.lazy(data-src="assets/images/content/product-1.png", alt="")
         .product__top-entry
           h3.product__top-title Код активации
           ul.product__list
@@ -21,23 +21,23 @@ mixin product(data)
             li.product__list-item полезные материалы Lite и Pro
 
       .product__bottom
-        .product__facts
+        .product__facts.flex
           article.product__fact
             article.product__fact-top
               .product__fact-title Lite - знания, которые <br/> упрощают жизнь
               .product__fact-icon
-                img(src="assets/images/general/fact-icon-1.png", alt="")
+                img.lazy(data-src="assets/images/general/fact-icon-1.png", alt="")
 
             .product__fact-text Например, узнаете о лучшем приложении для учета финансов, защитите соц сети от злома или научитесь обрабатывать фото как профи
 
 
           article.product__fact
             article.product__fact-top
-              .product__fact-title Pro - знания, которые приносят доход
+              .product__fact-title Pro - знания, которые <br/>приносят доход
               .product__fact-icon
-                img(src="assets/images/general/fact-icon-2.png", alt="")
+                img.lazy(data-src="assets/images/general/fact-icon-2.png", alt="")
 
             .product__fact-text Например, научитесь привлекать подписчиков и клиентов через соц сети для своего бизнеса или начнете зарабатывать на игре
 
 
-      a.product__button.button.button_secondary(href="#") Получить подарок
+        a.product__button.button.button_secondary.popup-open(href="#gift") Получить подарок

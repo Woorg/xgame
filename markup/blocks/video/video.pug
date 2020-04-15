@@ -1,7 +1,17 @@
 mixin video(data)
   section.video
-    .video__container.container
+    .video__container.container.flex
+
       .video__entry
-        h2.video__title.title Как превратить 400р в 163 тысячи
+        h2.video__title.title Как превратить <br/>400р в 163 тысячи
         .video__text В приложение встроена партнерская программа, с которой вы получаете автоматические заказы на товары от других игроков и имеете источник постоянного дохода
+
       .video__object
+        .video__object-w
+          iframe.video__iframe.lazy(data-src="https://www.youtube.com/embed/GgZikDgKVvg?controls=1&autoplay=1&mute=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+          //- a.video__button(href="#")
+          //-   img.lazy(data-src="assets/images/general/play-button.png", alt="")
+
+
+        .video__text-mob В приложение встроена партнерская программа, с которой вы получаете автоматические заказы на товары от других игроков и имеете источник постоянного дохода

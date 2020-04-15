@@ -1,2 +1,112 @@
-// .levels
+.levels
+  background: #292422
+  overflow: hidden
+  &__container
+    padding-top: 33px
+    padding-bottom: 56px
+    color: $white
+    text-align: center
+  &__title
+    margin-bottom: 20px
+
+  &__text
+    margin: auto
+    margin-bottom: 40px
+    width: 100%
+    font-family: $r
+    // font-size: 12px
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.125
+    +mq($medium)
+      max-width: 370px
+      font-size: 16px
+
+
+  &__slider
+    margin-right: -20px
+    margin-left: -20px
+    +mq($medium)
+      margin-right: -30px
+      margin-left: -30px
+    .slick-list
+      padding-right: 14%
+      padding-left: 14%
+      +mq($medium)
+        padding-right: 33%
+        padding-left: 33%
+
+
+  &__item
+    padding-top: 30px
+    padding-right: 10px
+    padding-bottom: 50px
+    padding-left: 10px
+    text-align: center
+
+    +mq($medium)
+      // padding-top: 51px
+      padding-right: 30px
+      padding-bottom: 30px
+      padding-left: 30px
+
+    &.slick-slide
+      .levels__item-w
+        // transform: scale(0.85)
+        will-change: transform
+        +tr(transform .3s ease)
+
+    &.slick-active
+      .levels__item-w
+        top: 0
+        // transform: scale(1.15)
+        +tr(transform .3s ease)
+
+      .levels__bottom
+        opacity: 1
+        +tr(opacity .3s ease)
+
+  &__item-w
+    will-change: transform
+    transform: scale(1)
+
+  &__image
+    display: block
+    img
+      margin-top: 10px
+
+  &__bottom
+    padding-top: 19px
+    font-size: $r
+    opacity: 0
+    +tr(opacity .3s ease)
+
+
+  &__item-title
+    font-weight: 900
+    font-family: $ak
+    font-size: 23px
+    line-height: 1.75
+
+  &__item-text
+    font-size: 14px
+    font-weight: 400
+
+  &__slider-nav
+    position: relative
+    // top: -48px
+    top: -70px
+    margin: auto
+    max-width: 310px
+    width: 100%
+    +mq($medium)
+      // top: -26px
+      top: -50px
+  &__prev
+    left: -10px
+  &__next
+    right: -10px
+
+
+
 

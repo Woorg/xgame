@@ -1,23 +1,25 @@
 mixin why(data)
   .why
     .why__container.container
-      ul.why__list
-        li.why__item
+      ul.why__list.flex
+
+        li.why__item.flex
           .why__image
-            img(src="assets/images/content/why-1.png", alt="")
+            img.lazy(data-src="assets/images/content/why-1.png", alt="")
           .why__entry
             h2.why__title Проверено Google Play и AppStore
             .why__text Приложение размещено в крупнейших сторах и прошло строгую проверку безопасности
-        li.why__item
+
+        li.why__item.flex
           .why__image
-            img(src="assets/images/content/why-2.png", alt="")
+            img.lazy(data-src="assets/images/content/why-2.png", alt="")
           .why__entry
             h2.why__title Работает без интернета
             .why__text Приложение не связывается с сервером и работает без интернета всегда и везде
 
-        li.why__item
+        li.why__item.flex
           .why__image
-            img(src="assets/images/content/why-3.png", alt="")
+            img.lazy(data-src="assets/images/content/why-3.png", alt="")
           .why__entry
             h2.why__title Деньги в руках игроков
             .why__text Не нужно пополнять и выводить, получайте оплату напрямую от игроков на карту или наличными

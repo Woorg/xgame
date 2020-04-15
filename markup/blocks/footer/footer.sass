@@ -1,3 +1,105 @@
-// .footer
-//   &__container
-//   &__copyright
+.footer
+  background-color: #292422
+  color: $white
+  overflow: hidden
+  &__container
+    padding-top: 78px
+    padding-bottom: 50px
+    +mq($medium)
+      padding-bottom: 101px
+
+  &__top
+    padding-bottom: 50px
+    flex-wrap: wrap
+    +mq($medium)
+      padding-bottom: 109px
+      flex-wrap: nowrap
+
+  &__entry
+    max-width: 100%
+    width: 100%
+    text-align: center
+    +mq($medium)
+      padding-top: 41px
+      padding-left: 90px
+      max-width: 50%
+      text-align: left
+
+
+  &__title
+    margin-bottom: 26px
+    line-height: 1
+    span
+      color: #00b5f4
+
+  &__title,
+  &__text
+    max-width: 100%
+    text-align: center
+    +mq($medium)
+      max-width: 320px
+      text-align: left
+
+  &__title
+    position: relative
+    z-index: 1
+    margin: auto
+    max-width: 290px
+    +mq($medium)
+      margin-bottom: 40px
+      margin-right: 0
+      margin-left: 0
+      line-height: 1.2
+
+  // &__text
+
+  &__button
+    margin-top: 40px
+    margin-bottom: 30px
+    padding-left: 63px
+    padding-right: 63px
+    font-size: 25px
+    +mq($medium)
+      margin-bottom: 0
+
+
+  &__person
+    max-width: 100%
+    width: 100%
+    flex-shrink: 0
+    +mq($medium)
+      max-width: 50%
+
+  &__image
+    padding-left: 62px
+    display: none
+    +mq($medium)
+      display: block
+
+  &__image-mob
+    margin-top: -10px
+    margin-right: auto
+    margin-left: auto
+    display: block
+    max-width: 350px
+    width: 100%
+    +mq($medium)
+      display: none
+
+
+  &__stores
+    margin: auto
+    max-width: 262px
+    width: 100%
+
+
+  // &__copyright
+
+
+
+
+  &__bottom
+    color: #cccccc
+    font-size: 13px
+    font-weight: 300
+    text-align: center

@@ -1,22 +1,47 @@
 mixin footer(data)
   footer.footer
-    .footer__container.container.flex
-      .footer__top
+    .footer__container.container
+      .footer__top.flex
         .footer__entry
-          h1.footer__title.title.title_big Скачай игру <span>за 30 секунд</span> и заработай на ней уже сегодня
-          .footer__text Играйте в xGame, чтобы прокачать себя и получить источник постоянного дохода
-          a.footer__button.button(href="#") Смотреть видео
+          h1.footer__title.title.title_big Скачайте сейчас и заработайте уже <span>сегодня</span>
+
+          picture.footer__image-mob
+
+            //- source(
+            //-   type='image/webp'
+            //-   media='(min-width:900px)'
+            //-   data-srcset='assets/images/general/person-footer@2x.webp 2x, assets/images/general/person-footer.webp 1x')
+            //- source(
+            //-   type='image/png'
+            //-   media='(min-width:900px)'
+            //-   data-srcset='assets/images/general/person-footer@2x.png 2x, assets/images/general/person-footer.png 1x')
+
+            source(
+              type='image/webp'
+              media='(min-width:300px)'
+              data-srcset='assets/images/general/person-footer-mob@2x.webp 2x, assets/images/general/person-footer-mob.webp 1x')
+
+            source(
+              type='image/png'
+              media='(min-width:300px)'
+              data-srcset='assets/images/general/person-footer-mob@2x.png 2x, assets/images/general/person-footer-mob.png 1x')
+
+            img.lazy(data-src='assets/images/general/person-footer-mob@2x.png' alt="")
+
+          .footer__text Играйте, развивайтесь и получайте <br/>постоянный доход, где бы не находились
+
+          a.footer__button.button.popup-open(href="#xgame") Начать игру
 
         .footer__person
           picture.footer__image
-            source(
-              type='image/webp'
-              media='(min-width:800px)'
-              data-srcset='assets/images/general/person-footer@2x.webp 2x, assets/images/general/person-footer.webp 1x')
-            source(
-              type='image/png'
-              media='(min-width:800px)'
-              data-srcset='assets/images/general/person-footer@2x.png 2x, assets/images/general/person-footer.png 1x')
+            //- source(
+            //-   type='image/webp'
+            //-   media='(min-width:900px)'
+            //-   data-srcset='assets/images/general/person-footer@2x.webp 2x, assets/images/general/person-footer.webp 1x')
+            //- source(
+            //-   type='image/png'
+            //-   media='(min-width:900px)'
+            //-   data-srcset='assets/images/general/person-footer@2x.png 2x, assets/images/general/person-footer.png 1x')
 
             source(
               type='image/webp'
@@ -25,9 +50,9 @@ mixin footer(data)
             source(
               type='image/png'
               media='(min-width:300px)'
-              data-srcset='assets/images/general/person-mob@2x.png 2x, assets/images/general/person-mob.png 1x')
+              data-srcset='assets/images/general/person-footer-mob@2x.png 2x, assets/images/general/person-footer-mob.png 1x')
 
-            img.lazy(data-src='assets/images/general/person@2x.png' alt="")
+            img.lazy(data-src='assets/images/general/person-footer-mob@2x.png' alt="")
 
 
           .footer__stores.stores.flex.flex_center

@@ -2,62 +2,48 @@
 mixin levels(data)
   section.levels
     .levels__container.container
-      h2.levels__title #{data.title}
+      h2.levels__title.title #{data.title}
       .levels__text #{data.text}
+
+
 
       .levels__slider
         -
+          var ii = 1;
+          var iii = 1;
+          var iiii = 1;
+          var iiiii = 1;
+
           var slider = [
+            {title: 'Мечтатель', text: '0 ₽'},
             {title: 'Вдохновитель', text: 'доход 1600 ₽'},
-            {title: 'Вдохновитель2', text: 'доход 1600 ₽'},
-            {title: 'Вдохновитель3 ', text: 'доход 1600 ₽'},
-            {title: 'Вдохновитель4', text: 'доход 1600 ₽'},
-            {title: 'Вдохновитель5', text: 'доход 1600 ₽'},
-            {title: 'Вдохновитель6', text: 'доход 1600 ₽'},
-
-
+            {title: 'Стартапер  ', text: 'доход 6\'400 ₽'},
+            {title: 'Предприниматель', text: 'доход 25\'600 ₽'},
+            {title: 'Соучредитель', text: 'доход 51\'200 ₽'},
+            {title: 'Основатель (песочный)', text: 'доход 102\'400 ₽'},
           ]
 
         each slide, i in slider
 
           .levels__item
-            .levels__image
-              img.lazy(data-src!='assets/images/content/' + (i+1) + '.png')
-            .levels__bottom
-              .levels__item-title #{slide.title}
-              .levels__item-text #{slide.text}
+            .levels__item-w
+              picture.levels__image
+                source(
+                  type='image/webp'
+                  media='(min-width:300px)'
+                  srcset='assets/images/content/' + (ii++) + '@2x.webp 2x, assets/images/content/' + (iii++) + '.webp 1x')
 
-        //- .levels__item
-        //-   .levels__image
-        //-     img.lazy(data-src="assets/images/content/2.png", alt="")
-        //-   .levels__bottom
-        //-     .levels__item-title Вдохновитель доход 1600 ₽
-        //-     .levels__item-text доход 1600 ₽
+                source(
+                  type='image/png'
+                  media='(min-width:300px)'
+                  srcset='assets/images/content/' + (iiii++) + '@2x.png 2x, assets/images/content/' + (iiiii++) + '.png 1x')
 
-        //- .levels__item
-        //-   .levels__image
-        //-     img.lazy(data-src="assets/images/content/3.png", alt="")
-        //-   .levels__bottom
-        //-     .levels__item-title Вдохновитель доход 1600 ₽
-        //-     .levels__item-text доход 1600 ₽
+                img(src!='assets/images/content/' + (i+1) + '.png' alt='')
 
-        //- .levels__item
-        //-   .levels__image
-        //-     img.lazy(data-src="assets/images/content/4.png", alt="")
-        //-   .levels__bottom
-        //-     .levels__item-title
-        //-     .levels__item-text
+              .levels__bottom
+                .levels__item-title #{slide.title}
+                .levels__item-text #{slide.text}
 
-        //- .levels__item
-        //-   .levels__image
-        //-     img.lazy(data-src="assets/images/content/5.png", alt="")
-        //-   .levels__bottom
-        //-     .levels__item-title
-        //-     .levels__item-text
-
-        //- .levels__item
-        //-   .levels__image
-        //-     img.lazy(data-src="assets/images/content/6.png", alt="")
-        //-   .levels__bottom
-        //-     .levels__item-title
-        //-     .levels__item-text
+      .levels__slider-nav.slider-nav
+        button.levels__prev.slider-nav__prev
+        button.levels__next.slider-nav__next

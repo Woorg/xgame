@@ -1,12 +1,37 @@
 mixin payment(data)
   section.payment
-    .payment__container.container
+    .payment__container.container.flex
       .payment__entry
-        h2.payment__title ВХОДЯЩИЕ ПЛАТеЖИ
-        .payment__text Получайте оплату напрямую от игроков на карту, электронный кошелек или наличными в руки
+        h2.payment__title.title ВХОДЯЩИЕ ПЛАТеЖИ
+        .payment__text Получайте оплату напрямую от игроков <br/>на карту, электронный кошелек или наличными в руки
 
-      ul.payment__slider
-        - var count = 1
-        while count <= 6
-          li.payment__item
-            img.lazy(data-src="assets/images/content/" + count++ + "-payments.png", alt="")
+      .payment__slider-w
+        .payment__slider
+          -
+            var count = 1
+            var b = 1
+            var bb = 1
+            var bbb = 1
+            var bbbb = 1
+
+          while count <= 6
+            .payment__item
+              picture.payment__item-w
+                source(
+                  type='image/webp'
+                  media='(min-width:300px)'
+                  srcset='assets/images/content/' + (b++) + '-payment@2x.webp 2x, assets/images/content/' + (bb++) + '-payment.webp 1x')
+
+                source(
+                  type='image/png'
+                  media='(min-width:300px)'
+                  srcset='assets/images/content/' + (bbb++) + '-payment@2x.png 2x, assets/images/content/' + (bbbb++) + '-payment.png 1x')
+
+                img(src="assets/images/content/" + count++ + "-payment.png", alt="")
+
+        .payment__slider-nav.slider-nav
+          button.payment__prev.slider-nav__prev
+          button.payment__next.slider-nav__next
+
+
+        .payment__text-mob Получайте оплату напрямую от игроков <br/>на карту, электронный кошелек или наличными в руки

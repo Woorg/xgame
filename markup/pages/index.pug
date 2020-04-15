@@ -16,14 +16,15 @@ html(class="no-js", lang="ru")
   include ../blocks/advantages/advantages.pug
   include ../blocks/faq/faq.pug
   include ../blocks/get/get.pug
+  include ../blocks/popup/popup.pug
 
 
   head
     +head(head.defaults)
   body.page
     |%=symbols=%
-    +header()
     main.page__inner
+      +header()
       +first-screen()
       +stats()
       +levels(levels)
@@ -38,12 +39,15 @@ html(class="no-js", lang="ru")
 
     .page__bottom
       +footer()
+      +popup()
+      +popup-gift()
+      +popup-xgame()
 
 
     script(src='%=static=%js/separate-js/lazyload.min.js' defer)
     script(src='%=static=%js/separate-js/jquery.min.js' defer)
+    script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js' defer)
     script(src='%=static=%js/separate-js/slick.min.js' defer)
-    //- script(src='%=static=%js/separate-js/jquery.mask.min.js' defer)
 
     script(src='%=static=%js/main%=hash=%%=min=%.js' defer)
 

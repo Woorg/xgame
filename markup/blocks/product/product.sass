@@ -1,1 +1,174 @@
-// .product
+.product
+  background-color: #292422
+  overflow: hidden
+  &__container
+    padding-top: 48px
+    padding-bottom: 64px
+    color: $white
+  &__title
+    text-align: center
+    line-height: 1
+  &__text
+    margin-bottom: 30px
+    text-align: center
+    font-size: 18px
+    font-family: $ak
+    font-weight: 900
+    +mq($medium)
+      margin-bottom: 60px
+
+
+  &__top
+    margin-bottom: 83px
+    justify-content: center
+    align-items: flex-end
+    flex-wrap: wrap
+    +mq($medium)
+      flex-wrap: nowrap
+
+  &__image
+    margin-bottom: 20px
+    max-width: 322px
+    width: 100%
+    flex-shrink: 0
+    order: 0
+    +mq($medium)
+      margin-right: 40px
+      margin-bottom: 0
+      margin-left: 40px
+      order: 2
+
+  &__top-entry
+    padding-bottom: 30px
+    max-width: 100%
+    width: 100%
+    text-align: center
+    +mq($medium)
+      padding-bottom: 47px
+      text-align: right
+    &:first-child
+      order: 1
+      +mq($medium)
+        order: 0
+        text-align: right
+
+    &:last-child
+      position: relative
+      order: 2
+
+      +mq($medium)
+        order: 3
+        text-align: left
+      &:after
+        position: absolute
+        top: 100%
+        left: 50%
+        content: ""
+        transform: translateX(-50%)
+        +bg($dots-white)
+        +mq($medium)
+          top: calc(100% - 16px)
+          left: 94px
+          transform: none
+          +bg($dots)
+
+
+  &__top-title
+    margin-bottom: 15px
+    font-family: $ak
+    font-weight: 900
+    font-size: 24px
+    +mq($medium)
+      margin-bottom: 30px
+
+
+  &__list
+    font-family: $r
+    font-size: 14px
+    font-weight: 400
+    +mq($medium)
+      font-size: 16px
+
+  &__list-item
+    &:before
+      content: "• "
+
+  &__bottom
+    padding-top: 40px
+    text-align: center
+    +mq($medium)
+      padding-top: 0
+
+  &__facts
+    margin-bottom: 50px
+    flex-wrap: wrap
+    +mq($medium)
+      flex-wrap: nowrap
+
+  &__fact
+    margin-bottom: 40px
+    +mq($medium)
+      margin-right: 25px
+      // margin-bottom: 0
+      padding-top: 40px
+      padding-right: 38px
+      padding-bottom: 40px
+      padding-left: 38px
+      background-color: #373433
+
+    &:first-child
+      text-align: center
+      +mq($medium)
+        text-align: right
+        border-radius: 30px 0 0 30px
+      .product__fact-icon
+        position: relative
+        left: 2px
+        +mq($medium)
+          position: absolute
+          left: 0
+
+    &:last-child
+      margin-bottom: 0
+      margin-right: 0
+      text-align: center
+      +mq($medium)
+        margin-bottom: 40px
+        text-align: left
+        border-radius: 0 30px 30px 0
+      .product__fact-icon
+        right: 0
+
+  &__fact-top
+    position: relative
+    display: flex
+    flex-direction: column
+    +mq($medium)
+      display: flex
+
+  &__fact-title
+    margin-bottom: 20px
+    font-family: $ak
+    font-size: 24px
+    font-weight: 900
+
+  &__fact-icon
+    margin-bottom: 30px
+    order: -1
+    margin: auto
+    // max-width: 84px
+    max-width: 48px
+    +mq($medium)
+      position: absolute
+      top: 0
+      margin-bottom: 0
+      order: 0
+  &__fact-text
+    font-family: $r
+    font-size: 14px
+    font-weight: 400
+    +mq($medium)
+      font-size: 16px
+
+  &__button
+    justify-content: center

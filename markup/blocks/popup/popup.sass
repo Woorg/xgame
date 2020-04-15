@@ -1,0 +1,110 @@
+.popup
+  position: relative
+  margin: auto
+  padding-top: 18px
+  padding-right: 20px
+  padding-bottom: 18px
+  padding-left: 20px
+  max-width: 800px
+  border-radius: 20px
+  background: $white
+  &__object
+    position: relative
+    padding-top: 55%
+    overflow: hidden
+  &__iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: #7c7c7c
+
+  .mfp-close
+    display: none
+
+
+  &__top
+    padding-top: 30px
+    padding-right: 20px
+    padding-bottom: 23px
+    padding-left: 20px
+    background-color: #00b7f4
+    border-radius: 20px 20px 0 0
+
+    flex-wrap: wrap
+    text-align: center
+    +mq($medium)
+      padding-top: 60px
+      padding-right: 40px
+      padding-left: 40px
+      padding-bottom: 46px
+      flex-wrap: nowrap
+      text-align: left
+
+  &__entry
+    width: 100%
+    color: $white
+    +mq($medium)
+      width: auto
+
+
+
+
+
+  &__title
+    margin-bottom: 30px
+    font-family: $ak
+    font-size: 30px
+    font-weight: 900
+    line-height: 1
+    text-transform: uppercase
+    +mq($medium)
+      font-size: 35px
+  &__text
+    font-size: 14px
+    +mq($medium)
+      font-size: 16px
+
+  &__image
+    margin-right: auto
+    margin-left: auto
+    flex-shrink: 0
+    display: none
+    +mq($medium)
+      margin-right: 0
+      display: block
+
+  &__image-mob
+    margin-right: auto
+    margin-bottom: 30px
+    margin-left: auto
+    flex-shrink: 0
+    display: block
+    +mq($medium)
+      display: none
+
+  &__bottom
+    padding-top: 32px
+    padding-bottom: 32px
+    background-color: #ffffff
+    text-align: center
+    border-radius: 0 0 20px 20px
+
+  &__note
+    color: #888888
+    font-size: 14px
+    a
+      color: inherit
+      font-weight: 700
+      &:hover
+        text-decoration: none
+
+
+.popup_info
+  padding-top: 0
+  padding-right: 0
+  padding-bottom: 0
+  padding-left: 0
+  max-width: 645px
+  width: 100%

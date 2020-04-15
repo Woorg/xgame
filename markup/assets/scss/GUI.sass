@@ -14,33 +14,85 @@
 
 
 .title
-  font-size: 20px
-  font-weight: 500
-  line-height: 1.4
-
+  color: $white
+  font-family: $ak
+  // font-size: 75px
+  font-size: 37px
+  font-weight: 900
+  line-height: 1.25
+  text-transform: uppercase
+  +mq($medium)
+    font-size: 40px
 
 
 .button
   +resetbutton()
-  padding-top: 16px
-  padding-right: 44px
-  padding-bottom: 16px
-  padding-left: 44px
+  padding-top: 11px
+  padding-right: 40px
+  padding-bottom: 13px
+  padding-left: 42px
+  display: inline-block
+  vertical-align: top
   background-color: #00b5f4
   color: $white
   font-family: $ak
-  font-size: 28px
+  font-size: 24px
   font-weight: 900
   line-height: 1
   text-decoration: none
   text-transform: uppercase
   +tr(background-color .3s ease)
+  +mq($medium)
+    font-size: 28px
 
   &:hover
     background-color: darken(#00b5f4, 10)
     +tr(background-color .3s ease)
 
+  &_secondary
+    padding-top: 11px
+    padding-right: 22px
+    padding-bottom: 10px
+    padding-left: 25px
+    height: 44px
+    background-color: #f7f7f7
+    color: #000000
+    font-family: $ak
+    font-size: 23px
+    border-radius: 22px
+    &:hover
+      background-color: darken(#f7f7f7, 10)
+      +tr(background-color .3s ease)
 
+  &_third
+
+    border: 3px solid #ffffff
+    padding-top: 14px
+    padding-right: 24px
+    padding-left: 29px
+    height: 50px
+    border-radius: 25px
+    background: transparent
+    color: #ffffff
+    font-family: $r
+    font-size: 16px
+    font-weight: 900
+    text-transform: uppercase
+    &:hover
+      border: 3px solid darken(#ffffff, 10)
+      background-color: transparent
+      color: darken(#ffffff, 10)
+      +tr(all .3s ease)
+
+  &_fourth
+    padding-right: 24px
+    padding-left: 24px
+    padding-top: 11px
+    padding-bottom: 12px
+    height: 44px
+    border-radius: 22px
+    background-color: #00b7f4
+    font-size: 23px
 
 
 .wysiwyg

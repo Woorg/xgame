@@ -8,18 +8,21 @@ body
   display: flex
   flex-direction: column
   background-color: #f1f7fc
-  color: #4d5055
+  color: #000
   font-family: $r
-  font-weight: 600
-  font-size: 16px
+  font-size: 14px
+  font-weight: 400
   line-height: 1.25
   font-display: swap
+  +mq($medium)
+    font-size: 16px
+
 
   &__inner
     flex-grow: 1
     flex-shrink: 0
     flex-basis: auto
-    // overflow: hidden
+    overflow: hidden
 
 .container
   margin: auto
@@ -31,3 +34,42 @@ body
 img
   max-width: 100%
   height: auto
+
+
+
+.slider-nav
+  position: relative
+  &__prev,
+  &__next
+    +resetbutton()
+    position: absolute
+    z-index: 1
+    top: 50%
+    width: 34px
+    text-align: left
+    transform: translateY(-50%)
+    +tr(opacity .3s ease)
+    &:after
+      position: absolute
+      top: 50%
+      left: 50%
+      content: ""
+      +bg($arrow)
+      transform: translate(-50%, -50%)
+    &:hover
+      opacity: .8
+      +tr(opacity .3s ease)
+
+  &__prev
+    left: 0
+    transform: translateY(-50%)
+  //   &:after
+
+  &__next
+    right: -12px
+    &:after
+      transform: translate(-50%, -50%) rotate(180deg)
+
+  &__prev-text,
+  &__next-text
+    +visuallyhidden()
