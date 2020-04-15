@@ -20,14 +20,14 @@ mixin payment(data)
                 source(
                   type='image/webp'
                   media='(min-width:300px)'
-                  srcset='assets/images/content/' + (b++) + '-payment@2x.webp 2x, assets/images/content/' + (bb++) + '-payment.webp 1x')
+                  data-srcset='assets/images/content/' + (b++) + '-payment@2x.webp 2x, assets/images/content/' + (bb++) + '-payment.webp 1x')
 
                 source(
                   type='image/png'
                   media='(min-width:300px)'
-                  srcset='assets/images/content/' + (bbb++) + '-payment@2x.png 2x, assets/images/content/' + (bbbb++) + '-payment.png 1x')
+                  data-srcset='assets/images/content/' + (bbb++) + '-payment@2x.png 2x, assets/images/content/' + (bbbb++) + '-payment.png 1x')
 
-                img(src="assets/images/content/" + count++ + "-payment.png", alt="")
+                img.lazy(data-src="assets/images/content/" + count++ + "-payment.png", alt="")
 
         .payment__slider-nav.slider-nav
           button.payment__prev.slider-nav__prev
