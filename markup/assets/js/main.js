@@ -3,10 +3,8 @@ import levelsSlider from '../../blocks/levels/levels';
 import paymentSlider from '../../blocks/payment/payment';
 import faq from '../../blocks/faq/faq';
 
-
 // import $ from 'jquery';
 // import slick from 'slick-carousel';
-
 
 (function ($) {
 
@@ -46,7 +44,6 @@ import faq from '../../blocks/faq/faq';
 
   $(function() {
 
-
     $('.popup-open').magnificPopup({
       type: 'inline',
       // closeBtnInside: true,
@@ -55,22 +52,13 @@ import faq from '../../blocks/faq/faq';
     });
 
 
-    // Sliders
-
+    /* Sliders */
     levelsSlider();
-
     paymentSlider();
 
-
-    // faq
-
+    /* Faq */
     faq();
 
-
-
   });
-
-
-
 
 })(jQuery);
