@@ -1,7 +1,19 @@
 {
-
+    "gulp-terser": {
+        "mangle": false,
+        "compress": {
+            "drop_console": "insert(tars.config.js.removeConsoleLog)",
+            "drop_debugger": "insert(tars.config.js.removeConsoleLog)"
+        }
+    },
+    "gulp-uglify": {
+        "mangle": false,
+        "compress": {
+            "drop_console": "insert(tars.config.js.removeConsoleLog)",
+            "drop_debugger": "insert(tars.config.js.removeConsoleLog)"
+        }
+    },
     // You can find docs for this file here: ./docs/en|ru/plugins-options.md
-
     "browserSync": {
         "startPath": "/index.html",
         "server": {
@@ -10,7 +22,6 @@
         "port": 3000,
         "open": false,
         "notify": false,
-
         // Choose browser to open
         // @type {String|Array}
         // Example: ['google chrome', 'firefox']
@@ -18,7 +29,6 @@
         "browser": "default",
         "injectChanges": true
     },
-
     "gulp-sass": {
         "outputStyle": "expanded",
         "includePaths": [
@@ -28,7 +38,6 @@
             "./bower_components/"
         ]
     },
-
     "gulp-less": {
         "paths": [
             "./",
@@ -47,35 +56,31 @@
             "./bower_components/"
         ]
     },
-
     // helpers option is set in make-sprite-for-svg.
     // It is strongly recommended to not override it!
     "gulp-compile-handlebars": {
-        "batch": ["./markup/insert(tars.config.fs.componentsFolderName)"]
+        "batch": [
+            "./markup/insert(tars.config.fs.componentsFolderName)"
+        ]
     },
-
     // locals option is set in ./tars.js
     "gulp-pug": {
         "pretty": true,
         "basedir": "markup/insert(tars.config.fs.componentsFolderName)"
     },
-
     // locals option is set in ./tars.js
     "gulp-jade": {
         "pretty": true,
         "basedir": "markup/insert(tars.config.fs.componentsFolderName)"
     },
-
     "gulp-csso": {
         "restructure": true
     },
-
     // cssPathSvg, templateSrc, templateDest and imgName is set in make-sprite-for-svg.
     // It is strongly recommended to not override these options!
     "gulp-svg-spritesheet": {
         "padding": 4
     },
-
     "gulp.spritesmith": {
         // Config for spritesmith in task make-fallback-for-svg
         // imgName, cssName, cssTemplate is set in task.
@@ -84,7 +89,6 @@
             "algorithm": "binary-tree",
             "padding": 4
         },
-
         // Config for spritesmith in task make-sprite
         // imgName, cssName, cssTemplate is set in task.
         // It is strongly recommended to not override these options!
@@ -93,7 +97,6 @@
             "padding": 4
         }
     },
-
     // This config can be overrided by user-tasks/html/helpers/modify-options
     "gulp-htmlmin": {
         "minifyCSS": true,
@@ -104,19 +107,10 @@
         "removeRedundantAttributes": true,
         "removeStyleLinkTypeAttributes": true
     },
-
     // This config can be overrided by user-tasks/html/helpers/modify-options
     "gulp-html-prettify": {
         "indent_char": " ",
         "indent_size": 2,
         "indent_inner_html": true
-    },
-
-    "gulp-uglify": {
-        "mangle": false,
-        "compress": {
-            "drop_console": "insert(tars.config.js.removeConsoleLog)",
-            "drop_debugger": "insert(tars.config.js.removeConsoleLog)"
-        }
     }
 }

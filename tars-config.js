@@ -61,6 +61,5 @@ module.exports = {
         "staticFolderName": "assets",
         "imagesFolderName": "images",
         "componentsFolderName": "blocks"
-    },
-    "staticPrefix": "../assets/"
+    }
 };

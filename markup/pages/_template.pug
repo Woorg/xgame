@@ -1,8 +1,8 @@
 doctype html
 html(class="no-js", lang="ru")
 
-    include ../blocks/head/head.pug
-    include ../blocks/footer/footer.pug
+    include ../components/head/head.pug
+    include ../components/footer/footer.pug
 
     head
         +head(head.defaults)
@@ -13,6 +13,7 @@ html(class="no-js", lang="ru")
 
             //- Include your components here
 
+            .page__buffer
 
         .page__footer
             +footer()

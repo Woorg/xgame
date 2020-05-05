@@ -41,7 +41,7 @@ if (compressJs) {
             terserOptions: {
                 compress: {
                     /* eslint-disable camelcase */
-                    // drop_console: tars.config.js.removeConsoleLog,
+                    drop_console: tars.config.js.removeConsoleLog,
                     drop_debugger: tars.config.js.removeConsoleLog
                     /* eslint-enable camelcase */
                 },

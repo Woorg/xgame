@@ -3,8 +3,10 @@ import levelsSlider from '../../blocks/levels/levels';
 import paymentSlider from '../../blocks/payment/payment';
 import faq from '../../blocks/faq/faq';
 
+
 // import $ from 'jquery';
 // import slick from 'slick-carousel';
+
 
 (function ($) {
 
@@ -22,7 +24,7 @@ import faq from '../../blocks/faq/faq';
     'font-weight: 400'
   ].join(';');
 
-  console.log('%c developed by igor gorlov https://igrlv.ru' , styles);
+  console.log('%c Made with love ❤️ by Igor Gorlov https://igrlv.ru' , styles);
 
 
   /*
